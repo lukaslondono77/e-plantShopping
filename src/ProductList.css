@@ -40,6 +40,12 @@ body {
    
 }
 
+/* Cart container for corner positioning */
+.cart-container {
+    position: relative;
+    margin-right: 20px;
+}
+
 /* Product Grid */
 .product-grid {
     display:flex;

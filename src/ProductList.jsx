@@ -226,12 +226,6 @@ function ProductList({ onHomeClick }) {
         alignIems: 'center',
         fontSize: '20px',
     }
-    const styleObjUl = {
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        width: '1100px',
-    }
     const styleA = {
         color: 'white',
         fontSize: '30px',
@@ -286,10 +280,9 @@ function ProductList({ onHomeClick }) {
                             </div>
                         </a>
                     </div>
-
                 </div>
-                <div style={styleObjUl}>
-                    <div> <a href="#" onClick={(e) => handleCartClick(e)} style={styleA}>
+                <div className="cart-container">
+                    <a href="#" onClick={(e) => handleCartClick(e)} style={styleA}>
                         <h1 className='cart'>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="IconChangeColor" height="68" width="68">
                                 <rect width="156" height="156" fill="none"></rect>
@@ -301,7 +294,7 @@ function ProductList({ onHomeClick }) {
                         {calculateTotalQuantity() > 0 && (
                             <div className="cart_quantity_count">{calculateTotalQuantity()}</div>
                         )}
-                    </a></div>
+                    </a>
                 </div>
             </div>
             {!showCart ? (
